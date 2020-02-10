@@ -45,7 +45,7 @@
 <form method="post" action="action_free.php">
 -->
 
-<form method="post" action="action_free.php">
+<form method="post" action="action.php">
     <div class="form-group">
       <input type="text" class="form-control" name="fname" placeholder="Name of person receiving messages" value=<?php echo $prevFName; ?> >
     </div>
