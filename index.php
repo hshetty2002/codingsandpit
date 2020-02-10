@@ -4,14 +4,13 @@
     $prevFName = !empty($_SESSION['fname'])?$_SESSION['fname']:'';
     $prevEmail = !empty($_SESSION['email'])?$_SESSION['email']:'';
     $prevPhone = !empty($_SESSION['phone'])?$_SESSION['phone']:'';
-    $prevDate = !empty($_SESSION['duedate'])?$_SESSION['duedate']:'';
+//    $prevDate = !empty($_SESSION['duedate'])?$_SESSION['duedate']:'';
     
     unset($_SESSION['msg']);
     unset($_SESSION['fname']);
     unset($_SESSION['email']);
     unset($_SESSION['phone']);
-    unset($_SESSION['duedate']);
-
+//    unset($_SESSION['duedate']);
     echo $statusMsg;
 
 ?>
@@ -47,19 +46,13 @@
 
 <form method="post" action="action.php">
     <div class="form-group">
-      <input type="text" class="form-control" name="fname" placeholder="Name of person receiving messages" value=<?php echo $prevFName; ?> >
+      <input type="text" class="form-control" name="fname" placeholder="Parent's name" value=<?php echo $prevFName; ?> >
     </div>
     <div class="form-group">
-      <input type="text" class="form-control" name="email" placeholder="Email to send messages to" value=<?php echo $prevEmail; ?> >
+      <input type="text" class="form-control" name="email" placeholder="Parent's email" value=<?php echo $prevEmail; ?> >
     </div>
     <div class="form-group">
-      <input type="text" class="form-control" name="phone" placeholder="Mobile number to send messages to" value=<?php echo $prevPhone; ?> >
-    </div>
-    <div class="form-group">
-        Approximate Due Date: <input type="date" name="duedate" value=<?php echo $prevDate; ?>>    
-    </div>
-    <div class="form-group">
-        (Due Date can be changed later)
+      <input type="text" class="form-control" name="phone" placeholder="Parent's phone" value=<?php echo $prevPhone; ?> >
     </div>
     <p><input type="checkbox" name="agree" value="YES"> I accept the Terms of Use, Privacy Policy and Refund Policy</input></p>
 	<p><button type="submit" class="btn btn-default" name="submit" value="REGISTER">Register</button></p>
