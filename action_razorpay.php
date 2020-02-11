@@ -20,13 +20,13 @@ if(isset($_POST['submit'])){
         <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
         <script>
         var options = {
-            "key": "YOUR_KEY_ID", // Enter the Key ID generated from the Dashboard
-            "amount": "50000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise or INR 500.
+            "key": "rzp_test_0iFYQGkeOpElYh", // Enter the Key ID generated from the Dashboard
+            "amount": "142100", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise or INR 500.
             "currency": "INR",
-            "name": "Acme Corp",
-            "description": "A Wild Sheep Chase is the third novel by Japanese author  Haruki Murakami",
-            "image": "https://example.com/your_logo",
-            "order_id": "order_9A33XWu170gUtm",//This is a sample Order ID. Create an Order using Orders API. (https://razorpay.com/docs/payment-gateway/orders/integration/#step-1-create-an-order). Refer the Checkout form table given below
+//            "name": "Acme Corp",
+//            "description": "A Wild Sheep Chase is the third novel by Japanese author  Haruki Murakami",
+//            "image": "https://example.com/your_logo",
+//            "order_id": "order_9A33XWu170gUtm",//This is a sample Order ID. Create an Order using Orders API. (https://razorpay.com/docs/payment-gateway/orders/integration/#step-1-create-an-order). Refer the Checkout form table given below
             "handler": function (response){
                 alert(response.razorpay_payment_id);
             },
