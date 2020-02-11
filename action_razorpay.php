@@ -31,12 +31,13 @@ if(isset($_POST['submit'])){
                 alert(response.razorpay_payment_id);
             },
             "prefill": {
-                "name": "Gaurav Kumar",
-                "email": "gaurav.kumar@example.com",
-                "contact": "9999999999"
+                "name": $fname,
+                "email": $email,
+                "contact": $phone
             },
             "notes": {
-                "address": "note value"
+                "child's name": "child's name",
+                "child's grade": "child's grade"
             },
             "theme": {
                 "color": "#F37254"
