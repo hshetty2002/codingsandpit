@@ -1,5 +1,5 @@
+<?php session_start(); // place it on the top of the script ?>
 <?php
-session_start();
 if(isset($_POST['submit'])){
     $fname = $_POST['fname'];
     $email = $_POST['email'];
@@ -23,16 +23,16 @@ if(isset($_POST['submit'])){
             data-amount="142100" // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise or INR 500.
             data-currency="INR"
             data-buttontext="Pay with Razorpay"
-            data-prefill.name=$fname
-            data-prefill.email=$email
-            data-prefill.contact=$phone
+            data-prefill.name=<?php echo $fname; ?>
+            data-prefill.email=<?php echo $email; ?>
+            data-prefill.contact=<?php echo $phone; ?>
             data-notes.childsname="Child's name"
             data-notes.childsgrade="Child's grade"
         ></script>
         <input type="hidden" custom="Hidden Element" name="hidden">
         </form>
 
-<?php        
+<?php
 
     }else{
         $_SESSION['msg'] = '<p style="color: #EA4335">Please enter valid email address, valid phone number and agree to Terms of Use. </p>';
