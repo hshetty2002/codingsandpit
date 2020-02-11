@@ -16,8 +16,8 @@ if(isset($_POST['submit'])){
     if($email_ok && $phone_ok && $agree_ok){
 
 ?>
-        <form action="https://www.codingkidsnow.com/thank-you" method="POST">
-        <script
+<!--        <form action="https://www.codingkidsnow.com/thank-you" method="POST">
+-->        <script
             src="https://checkout.razorpay.com/v1/checkout.js"
             data-key="rzp_test_0iFYQGkeOpElYh" // Enter the Key ID generated from the Dashboard
             data-amount="142100" // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise or INR 500.
@@ -29,8 +29,8 @@ if(isset($_POST['submit'])){
             data-notes.childsname="Child's name"
             data-notes.childsgrade="Child's grade"
         ></script>
-        <input type="hidden" custom="Hidden Element" name="hidden">
-        </form>
+<!--        <input type="hidden" custom="Hidden Element" name="hidden">
+-->        </form>
 
 <?php
 
