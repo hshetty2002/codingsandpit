@@ -3,6 +3,7 @@
 <html>
 <head>
 <title>Razorpay Payment</title>
+<script type="text/javascript" src="https://checkout.razorpay.com/v1/razorpay.js"></script>
 </head>
 <body>
 <center>
