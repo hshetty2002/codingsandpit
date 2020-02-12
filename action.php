@@ -6,7 +6,7 @@
 
 
 <script
-    src="https://cdn.razorpay.com/static/checkout/wix.js"
+    src="https://checkout.razorpay.com/v1/razorpay.js"
     data-key="rzp_test_0iFYQGkeOpElYh"
     data-amount="142100" 
     data-currency="INR"
