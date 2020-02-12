@@ -35,12 +35,7 @@
 
     <div class="container">
 
-<!--
 <form method="post" action="action.php">
-<form method="post" action="action_free.php">
--->
-
-<form method="post" action="action_razorpay.php">
     <div class="form-group">
       <input type="text" class="form-control" name="fname" placeholder="Child's name" value=<?php echo $prevFName; ?> >
     </div>
