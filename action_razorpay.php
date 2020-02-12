@@ -2,18 +2,19 @@
 <?php
 if(isset($_POST['submit'])){
     $fname = $_POST['fname'];
-    $email = $_POST['email'];
+    $standard = $_POST['standard'];
 //    $phone = $_POST['phone'];
-    $phone = preg_replace('/[^0-9]/', '', $_POST['phone']);
+//    $phone = preg_replace('/[^0-9]/', '', $_POST['phone']);
     
     $agree = $_POST['agree'];
     
     if(!empty($email) && !filter_var($email, FILTER_VALIDATE_EMAIL) === false){ $email_ok = 1;} else { $email_ok = 0;}
-    if(!empty($phone) && strlen($phone) === 10){ $phone_ok = 1;} else { $phone_ok = 0;}
+//    if(!empty($phone) && strlen($phone) === 10){ $phone_ok = 1;} else { $phone_ok = 0;}
+    if(!empty($standard) && $standard != 0){ $standard_ok = 1;} else { $standard_ok = 0;}
 
     if(!empty($agree) && ($agree === "YES")) { $agree_ok = 1;} else { $agree_ok = 0;}
 
-    if($email_ok && $phone_ok && $agree_ok){
+    if($email_ok && $standard_ok && $agree_ok){
 
 ?>
 <!--        <form action="https://www.codingkidsnow.com/thank-you" method="POST">

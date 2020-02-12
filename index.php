@@ -2,14 +2,14 @@
 <?php
     $statusMsg = !empty($_SESSION['msg'])?$_SESSION['msg']:'';
     $prevFName = !empty($_SESSION['fname'])?$_SESSION['fname']:'';
-    $prevEmail = !empty($_SESSION['email'])?$_SESSION['email']:'';
-    $prevPhone = !empty($_SESSION['phone'])?$_SESSION['phone']:'';
+    $prevStandard = !empty($_SESSION['email'])?$_SESSION['standard']:'';
+//    $prevPhone = !empty($_SESSION['phone'])?$_SESSION['phone']:'';
 //    $prevDate = !empty($_SESSION['duedate'])?$_SESSION['duedate']:'';
     
     unset($_SESSION['msg']);
     unset($_SESSION['fname']);
-    unset($_SESSION['email']);
-    unset($_SESSION['phone']);
+    unset($_SESSION['standard']);
+//    unset($_SESSION['phone']);
 //    unset($_SESSION['duedate']);
     echo $statusMsg;
 
@@ -65,18 +65,6 @@
 	<p><button type="submit" class="btn btn-default" name="submit" value="REGISTER">Register</button></p>
 
 
-
-<!--
-    <p><label>Name of person receiving messages: </label><input type="text" name="fname" value=<?php echo $prevFName; ?> ></p>
-    <p><label>Email: </label><input type="text" name="email" value=<?php echo $prevEmail; ?> ></p>
-    <p><label>Phone: </label><input type="text" name="phone" value=<?php echo $prevPhone; ?> ></p>
-    <p><input type="submit" name="submit" value="REGISTER"/></p>
-	
-	<input size="16" type="text" value="2012-06-15 14:45" readonly class="form_datetime">
- 
-
--->    
-   
 </form>
 
 </body>
