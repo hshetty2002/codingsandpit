@@ -49,9 +49,9 @@
       <input type="text" class="form-control" name="fname" placeholder="Child's name" value=<?php echo $prevFName; ?> >
     </div>
     <div class="form-group">
-        <select name="standard" size="1" class="form-control" value=<?php echo $prevStandard; ?> >
-            <option value="0">Child's standard</option>
-            <option value="1">Standard 1</option>
+        <select name="standard" size="1" class="form-control" placeholder="Child's standard">
+<!--            <option value="0">Child's standard</option>
+-->            <option value="1">Standard 1</option>
             <option value="2">Standard 2</option>
         </select>
     </div>
