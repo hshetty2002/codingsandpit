@@ -2,15 +2,11 @@
 <?php
     $statusMsg = !empty($_SESSION['msg'])?$_SESSION['msg']:'';
     $prevFName = !empty($_SESSION['fname'])?$_SESSION['fname']:'';
-    $prevStandard = !empty($_SESSION['email'])?$_SESSION['standard']:'';
-//    $prevPhone = !empty($_SESSION['phone'])?$_SESSION['phone']:'';
-//    $prevDate = !empty($_SESSION['duedate'])?$_SESSION['duedate']:'';
-    
+    $prevStandard = !empty($_SESSION['standard'])?$_SESSION['standard']:'';
+
     unset($_SESSION['msg']);
     unset($_SESSION['fname']);
     unset($_SESSION['standard']);
-//    unset($_SESSION['phone']);
-//    unset($_SESSION['duedate']);
     echo $statusMsg;
 
 ?>

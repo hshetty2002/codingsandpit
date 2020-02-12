@@ -3,18 +3,13 @@
 if(isset($_POST['submit'])){
     $fname = $_POST['fname'];
     $standard = $_POST['standard'];
-//    $phone = $_POST['phone'];
-//    $phone = preg_replace('/[^0-9]/', '', $_POST['phone']);
-    
+
     $agree = $_POST['agree'];
     
-    if(!empty($email) && !filter_var($email, FILTER_VALIDATE_EMAIL) === false){ $email_ok = 1;} else { $email_ok = 0;}
-//    if(!empty($phone) && strlen($phone) === 10){ $phone_ok = 1;} else { $phone_ok = 0;}
     if(!empty($standard) && $standard != 0){ $standard_ok = 1;} else { $standard_ok = 0;}
-
     if(!empty($agree) && ($agree === "YES")) { $agree_ok = 1;} else { $agree_ok = 0;}
 
-    if($email_ok && $standard_ok && $agree_ok){
+    if($standard_ok && $agree_ok){
 
 ?>
 <!--        <form action="https://www.codingkidsnow.com/thank-you" method="POST">
@@ -36,10 +31,9 @@ if(isset($_POST['submit'])){
 <?php
 
     }else{
-        $_SESSION['msg'] = '<p style="color: #EA4335">Please enter valid email address, valid phone number and agree to Terms of Use. </p>';
+        $_SESSION['msg'] = '<p style="color: #EA4335">Please enter valid standard and agree to Terms of Use. </p>';
         $_SESSION['fname'] = $fname;
-        $_SESSION['email'] = $email;
-        $_SESSION['phone'] = $phone;
+        $_SESSION['standard'] = $standard;
 
         header('location:index.php');
     }
