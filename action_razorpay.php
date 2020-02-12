@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
     if($standard_ok && $agree_ok){
 
 ?>
-        <form action="https://www.codingkidsnow.com/thank-you" method="POST">
+        <form action="https://codingkidsnow.herokuapp.com/thankyou.php" method="POST">
         <script
             src="https://checkout.razorpay.com/v1/checkout.js"
             data-key="rzp_test_0iFYQGkeOpElYh" //this key is for the Test mode
