@@ -3,6 +3,7 @@
 <html>
 <head>
 <title>Razorpay Payment</title>
+<script type="text/javascript" src="https://checkout.razorpay.com/v1/razorpay.js"></script>
 </head>
 <body>
 <center>
@@ -22,35 +23,50 @@
     $fname = $_SESSION['fname'];
     $standard = $_SESSION['standard'];
 
+?>
 
-    <script type="text/javascript" src="https://checkout.razorpay.com/v1/razorpay.js">
-    var razorpay = new Razorpay({
-      key: 'rzp_test_0iFYQGkeOpElYh',
-    });
+<!--
+	<form method="post" name="redirect" target='_parent' action="https://secure.ccavenue.com/transaction/transaction.do?command=initiateTransaction"> 
+//	<?php
+//		echo "<input type=hidden name=encRequest value=$encrypted_data>";
+//		echo "<input type=hidden name=access_code value=$access_code>";
+//	?>
+	</form>
+	<script language='javascript'>document.redirect.submit();</script>
 
-    var data = {
-      amount: 1000, // in currency subunits. Here 1000 = 1000 paise, which equals to ₹10
-      currency: "INR"// Default is INR. We support more than 90 currencies.
-      email: 'gaurav.kumar@example.com',
-      contact: '9123456780',
-      notes: {
-        address: 'Ground Floor, SJR Cyber, Laskar Hosur Road, Bengaluru',
-      },
-    };
-    
-    $btn.on('click', function(){
-      // has to be placed within user initiated context, such as click, in order for popup to open.
-      razorpay.createPayment(data);
-    
-      razorpay.on('payment.success', function(resp) {
-        alert(resp.razorpay_payment_id),
-        alert(resp.razorpay_order_id),
-        alert(resp.razorpay_signature)}); // will pass payment ID, order ID, and Razorpay signature to success handler.
-    
-      razorpay.on('payment.error', function(resp){alert(resp.error.description)}); // will pass error object to error handler
-    
-    })
-    </script>
+-->
+
+    <form action="https://codingkidsnow.herokuapp.com/thankyou.php" method="POST">
+    <script
+        src="https://checkout.razorpay.com/v1/checkout.js"
+        data-key="rzp_test_0iFYQGkeOpElYh" //this key is for the Test mode
+        data-amount="142100" // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise or INR 500.
+        data-currency="INR"
+        data-notes.childname=<?php echo $fname; ?>
+        data-notes.childstandard=<?php echo $standard; ?>
+    ></script>
+    </form>
+	<script language='javascript'>document.redirect.submit();</script>
+
+<!-- Old
+
+    <form action="https://codingkidsnow.herokuapp.com/thankyou.php" method="POST">
+    <script
+        src="https://checkout.razorpay.com/v1/checkout.js"
+        data-key="rzp_test_0iFYQGkeOpElYh" //this key is for the Test mode
+        data-amount="142100" // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise or INR 500.
+        data-currency="INR"
+        data-buttontext="Pay with Razorpay"
+        data-notes.childname=<?php echo $fname; ?>
+        data-notes.childstandard=<?php echo $standard; ?>
+    ></script>
+    <input type="hidden" custom="Hidden Element" name="hidden">
+    </form>
+
+
+-->
+
+
 
 
 </center>
