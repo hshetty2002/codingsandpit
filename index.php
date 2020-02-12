@@ -53,9 +53,15 @@
             <option value="0">Child's standard</option>
             <option value="1">Standard 1</option>
             <option value="2">Standard 2</option>
+            <option value="2">Standard 3</option>
+            <option value="2">Standard 4</option>
+            <option value="2">Standard 5</option>
+            <option value="2">Standard 6</option>
+            <option value="2">Standard 7</option>
+            <option value="2">Standard 8</option>
         </select>
     </div>
-    <p><input type="checkbox" name="agree" value="YES"> I, the parent of the child listed above, accept the Terms of Use, Privacy Policy and Refund Policy</input></p>
+    <p><input type="checkbox" name="agree" value="YES"> I, the parent of the child listed above, accept the Terms of Use, Privacy Policy and Refund Policy.</input></p>
 	<p><button type="submit" class="btn btn-default" name="submit" value="REGISTER">Register</button></p>
 
 
