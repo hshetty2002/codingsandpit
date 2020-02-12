@@ -6,10 +6,10 @@
 
 
 <script
-    src="https://checkout.razorpay.com/v1/razorpay.js"
+    src="https://cdn.razorpay.com/static/checkout/wix.js"
     data-key="rzp_test_0iFYQGkeOpElYh"
     data-amount="142100" 
     data-currency="INR"
-    data-notes.childname=<?php echo $fname; ?>
-    data-notes.childstandard=<?php echo $standard; ?>
+    data-notes.childname="Harsh"
+    data-notes.childstandard="2"
 ></script>
