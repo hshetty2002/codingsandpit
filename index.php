@@ -46,15 +46,18 @@
 
 <form method="post" action="action_razorpay.php">
     <div class="form-group">
-      <input type="text" class="form-control" name="fname" placeholder="Parent's name" value=<?php echo $prevFName; ?> >
+      <input type="text" class="form-control" name="fname" placeholder="Child's name" value=<?php echo $prevFName; ?> >
     </div>
     <div class="form-group">
-      <input type="text" class="form-control" name="email" placeholder="Parent's email" value=<?php echo $prevEmail; ?> >
+        <select name="standard" size="2" class="form-control" value=<?php echo $prevStandard; ?> >
+            <option value="1">Standard 1</option>
+            <option value="2">Standard 2</option>
+        </select>
     </div>
     <div class="form-group">
       <input type="text" class="form-control" name="phone" placeholder="Parent's phone" value=<?php echo $prevPhone; ?> >
     </div>
-    <p><input type="checkbox" name="agree" value="YES"> I accept the Terms of Use, Privacy Policy and Refund Policy</input></p>
+    <p><input type="checkbox" name="agree" value="YES"> I, the parent of the child listed above, accept the Terms of Use, Privacy Policy and Refund Policy</input></p>
 	<p><button type="submit" class="btn btn-default" name="submit" value="REGISTER">Register</button></p>
 
 
