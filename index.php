@@ -6,6 +6,7 @@
     $prevPFName = !empty($_SESSION['pfname'])?$_SESSION['pfname']:'';
     $prevPhone = !empty($_SESSION['phone'])?$_SESSION['phone']:'';
     $prevEmail = !empty($_SESSION['email'])?$_SESSION['email']:'';
+    $prevAddress = !empty($_SESSION['address'])?$_SESSION['address']:'';
 
     unset($_SESSION['msg']);
     unset($_SESSION['fname']);
@@ -13,6 +14,7 @@
     unset($_SESSION['pfname']);
     unset($_SESSION['phone']);
     unset($_SESSION['email']);
+    unset($_SESSION['address']);
     echo $statusMsg;
 
 ?>
@@ -68,6 +70,9 @@
     </div>
     <div class="form-group">
       <input type="text" class="form-control" name="email" placeholder="Parent's email" value=<?php echo $prevEmail; ?> >
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" name="address" placeholder="Address to send books" value=<?php echo $prevAddress; ?> >
     </div>
     <p><input type="checkbox" name="agree" value="YES"> I, the parent, accept the Terms of Use, Privacy Policy and Refund Policy.</input></p>
 	<p><button type="submit" class="btn btn-default" name="submit" value="REGISTER">Register</button></p>

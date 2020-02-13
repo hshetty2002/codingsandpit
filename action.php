@@ -6,6 +6,7 @@ if(isset($_POST['submit'])){
     $phone = preg_replace('/[^0-9]/', '', $_POST['phone']);
     $pfname = $_POST['pfname'];
     $email = $_POST['email'];
+    $address = $_POST['address'];
 
     $agree = $_POST['agree'];
     
@@ -21,6 +22,8 @@ if(isset($_POST['submit'])){
         $_SESSION['pfname'] = $pfname;
         $_SESSION['phone'] = $phone;
         $_SESSION['email'] = $email;
+        $_SESSION['address'] = $address;
+
         header('location:razorpay/rpRequestHandler.php');
 
     }else{
@@ -30,6 +33,7 @@ if(isset($_POST['submit'])){
         $_SESSION['pfname'] = $pfname;
         $_SESSION['phone'] = $phone;
         $_SESSION['email'] = $email;
+        $_SESSION['address'] = $address;
 
         header('location:index.php');
     }
