@@ -24,7 +24,7 @@ if(isset($_POST['submit'])){
         header('location:razorpay/rpRequestHandler.php');
 
     }else{
-        $_SESSION['msg'] = '<p style="color: #EA4335">Please enter valid standard and agree to Terms of Use. </p>';
+        $_SESSION['msg'] = '<p style="color: #EA4335">Please enter valid standard, email, phone and agree to Terms of Use. </p>';
         $_SESSION['fname'] = $fname;
         $_SESSION['standard'] = $standard;
         $_SESSION['pfname'] = $pfname;
