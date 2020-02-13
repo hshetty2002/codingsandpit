@@ -57,7 +57,7 @@
         data-prefill.contact=<?php echo $phone; ?>  
         data-notes.childname=<?php echo $fname; ?>
         data-notes.childstandard=<?php echo $standard; ?>
-        data-notes.address=<?php echo $address; ?>
+        data-notes.address="<?php echo $address; ?>"
     ></script>
     <input type="hidden" custom="Hidden Element" name="hidden">
     </form>
