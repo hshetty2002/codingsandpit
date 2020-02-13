@@ -41,6 +41,7 @@
     <div class="container">
     <div class="text">
       <p>We have received your details, please Pay to complete the registration.</p>
+      <p>We have pre-filled the credit card form with your details but you can change it if required.</p>
     </div>
 
     <form action="https://codingkidsnow.herokuapp.com/thankyou.php" method="POST">
