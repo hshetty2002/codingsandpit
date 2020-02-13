@@ -7,7 +7,6 @@ if(isset($_POST['submit'])){
     $pfname = $_POST['pfname'];
     $email = $_POST['email'];
     $address = $_POST['address'];
-
     $agree = $_POST['agree'];
     
     if(!empty($standard) && $standard != 0){ $standard_ok = 1;} else { $standard_ok = 0;}
