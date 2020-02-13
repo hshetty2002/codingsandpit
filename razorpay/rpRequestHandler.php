@@ -4,7 +4,7 @@
 <head>
 <title>Razorpay Payment</title>
     <style type="text/css">
-    .button {
+    .razorpay-payment-button {
       background-color: #4CAF50; /* Green */
       border: none;
       color: white;
