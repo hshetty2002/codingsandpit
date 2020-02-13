@@ -33,8 +33,15 @@
 // pull the variables out of the session
     $fname = $_SESSION['fname'];
     $standard = $_SESSION['standard'];
+    $pfname = $_SESSION['pfname'];
+    $phone = $_SESSION['phone'];
+    $email = $_SESSION['email'];
 
 ?>
+    <div class="container">
+    <div class="text">
+      <p>We have received your details, please Pay to complete the registration.</p>
+    </div>
 
     <form action="https://codingkidsnow.herokuapp.com/thankyou.php" method="POST">
     <script
@@ -43,6 +50,9 @@
         data-amount="142100" // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise or INR 500.
         data-currency="INR"
         data-buttontext="Pay"
+        data-prefill.name=<?php echo $pfname; ?>
+        data-prefill.email=<?php echo $email; ?>
+        data-prefill.contact=<?php echo $phone; ?>  
         data-notes.childname=<?php echo $fname; ?>
         data-notes.childstandard=<?php echo $standard; ?>
     ></script>

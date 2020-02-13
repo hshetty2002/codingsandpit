@@ -40,7 +40,6 @@
 <body>
 
 <br>
-<br>
 
     <div class="container">
 
@@ -70,7 +69,7 @@
     <div class="form-group">
       <input type="text" class="form-control" name="email" placeholder="Parent's email" value=<?php echo $prevEmail; ?> >
     </div>
-    <p><input type="checkbox" name="agree" value="YES"> I, the parent of the child listed above, accept the Terms of Use, Privacy Policy and Refund Policy.</input></p>
+    <p><input type="checkbox" name="agree" value="YES"> I, the parent, accept the Terms of Use, Privacy Policy and Refund Policy.</input></p>
 	<p><button type="submit" class="btn btn-default" name="submit" value="REGISTER">Register</button></p>
 
 
