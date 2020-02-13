@@ -21,7 +21,13 @@
 
 <body>
 
-Thank you.
+    <div class="container">
+    <div class="text">
+      <p>We have received your payment. Thank you.</p>
+      <p>Books will be shipped to your address. Login to the coding platform will be sent via email/WhatsApp.</p>
+      <p>Enjoy the program!</p>
+    </div>
+
 
 </body>
 </html>
