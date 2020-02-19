@@ -63,12 +63,12 @@ if(isset($_POST['submit'])){
 
     }else{
         $_SESSION['msg'] = '<p style="color: #EA4335">Please enter valid standard, email, phone and agree to Terms of Use. </p>';
-        $_SESSION['fname'] = "echo $fname";
+        $_SESSION['fname'] = 'echo $fname';
         $_SESSION['standard'] = $standard;
-        $_SESSION['pfname'] = "echo $pfname";
+        $_SESSION['pfname'] = 'echo $pfname';
         $_SESSION['phone'] = $phone;
         $_SESSION['email'] = $email;
-        $_SESSION['address'] = "echo $address";
+        $_SESSION['address'] = 'echo $address';
 
         header('location:index.php');
     }
