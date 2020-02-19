@@ -45,10 +45,12 @@
       <p>We have pre-filled the credit card form with your details but you can change it if required.</p>
     </div>
 
+<!--        data-key="rzp_test_0iFYQGkeOpElYh" //this key is for the Test mode
+-->
     <form action="https://codingkidsnow.herokuapp.com/thankyou.php" method="POST">
     <script
         src="https://checkout.razorpay.com/v1/checkout.js"
-        data-key="rzp_test_0iFYQGkeOpElYh" //this key is for the Test mode
+        data-key="rzp_live_6AuPzoSb8VdrBq" //this key is for the Live mode
         data-amount="142100" // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise or INR 500.
         data-currency="INR"
         data-buttontext="Pay"
