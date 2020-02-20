@@ -16,6 +16,7 @@
     unset($_SESSION['email']);
     unset($_SESSION['address']);
     echo $statusMsg;
+    echo $prevFName;
 
 ?>
 
