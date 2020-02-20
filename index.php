@@ -16,7 +16,6 @@
     unset($_SESSION['email']);
     unset($_SESSION['address']);
     echo $statusMsg;
-    echo $prevFName;
 
 ?>
 
@@ -48,7 +47,7 @@
 
 <form method="post" action="action.php">
     <div class="form-group">
-      <input type="text" class="form-control" name="fname" placeholder="Child's name" value=<?php echo $prevFName; ?> >
+      <input type="text" class="form-control" name="fname" placeholder="Child's name" value="<?php echo $prevFName; ?>" >
     </div>
     <div class="form-group">
         <select name="standard" size="1" class="form-control">
@@ -64,7 +63,7 @@
         </select>
     </div>
     <div class="form-group">
-      <input type="text" class="form-control" name="pfname" placeholder="Parent's name" value=<?php echo $prevPFName; ?> >
+      <input type="text" class="form-control" name="pfname" placeholder="Parent's name" value="<?php echo $prevPFName; ?>" >
     </div>
     <div class="form-group">
       <input type="text" class="form-control" name="phone" placeholder="Parent's phone" value=<?php echo $prevPhone; ?> >
@@ -73,7 +72,7 @@
       <input type="text" class="form-control" name="email" placeholder="Parent's email" value=<?php echo $prevEmail; ?> >
     </div>
     <div class="form-group">
-      <input type="text" class="form-control" name="address" placeholder="Address to send books" value=<?php echo $prevAddress; ?> >
+      <input type="text" class="form-control" name="address" placeholder="Address to send books" value="<?php echo $prevAddress; ?>" >
     </div>
     <p><input type="checkbox" name="agree" value="YES"> I, the parent, accept the Terms of Use, Privacy Policy and Refund Policy.</input></p>
 	<p><button type="submit" class="btn btn-default" name="submit" value="REGISTER">Register</button></p>
